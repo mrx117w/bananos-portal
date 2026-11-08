@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#000000">
+
+    <meta
+        name="description"
+        content="Bananos Bar - Menú digital"
+    >
+
+    <title>Bananos Bar</title>
+
+    <link rel="stylesheet" href="style.css?v=0000000000">
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SPLASH
+========================================================= -->
+
+<section id="splash" class="splash">
+
+    <div class="splash-glow"></div>
+
+    <div class="splash-stars">
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+    </div>
+
+    <img
+        src="assets/img/logo.jpg"
+        class="splash-logo"
+        alt="Bananos Bar"
+    >
+
+    <div class="splash-name">
+        BANANOS BAR
+    </div>
+
+    <div class="splash-sub">
+        DRINKS • MUSIC • EXPERIENCE
+    </div>
+
+    <div class="loader">
+        <span></span>
+    </div>
+
+    <small class="loading-text">
+        PREPARANDO LA EXPERIENCIA
+    </small>
+
+</section>
+
+
+
+<!-- =========================================================
+     APP
+========================================================= -->
+
+<main id="app" class="app hidden">
+
+
+    <!-- =====================================================
+         FONDO GLOBAL
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="ambient ambient-1"></div>
+        <div class="ambient ambient-2"></div>
+        <div class="ambient ambient-3"></div>
+
+        <div class="palm palm-1">🌴</div>
+        <div class="palm palm-2">🌴</div>
+        <div class="palm palm-3">🌴</div>
+        <div class="palm palm-4">🌴</div>
+
+        <div class="float-drink fd-1">🍺</div>
+        <div class="float-drink fd-2">🍻</div>
+        <div class="float-drink fd-3">🍹</div>
+        <div class="float-drink fd-4">🥃</div>
+        <div class="float-drink fd-5">🍺</div>
+        <div class="float-drink fd-6">🍸</div>
+
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="bubble b4"></div>
+        <div class="bubble b5"></div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    <====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <span class="status-dot"></span>
+
+            BANANOS BAR
+
+        </div>
+
+        <div class="header-icon">
+            🍸
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         INICIO
+    ====================================================== -->
+
+    <section
+        id="homeScreen"
+        class="screen active"
+    >
+
+        <div class="hero">
+
+            <div class="welcome-pill">
+                ✦ BIENVENIDO
+            </div>
+
+
+            <div class="logo-stage">
+
+                <div class="logo-glow"></div>
+
+                <div class="logo-ring ring-1"></div>
+                <div class="logo-ring ring-2"></div>
+
+                <img
+                    src="assets/img/logo.jpg"
+                    class="main-logo"
+                    alt="Bananos Bar"
+                >
+
+            </div>
+
+
+            <div class="hero-text">
+
+                <small>
+                    DRINKS • MUSIC • EXPERIENCE
+                </small>
+
+                <h1>
+                    QUE EMPIECE
+                    <span>LO BUENO</span>
+                </h1>
+
+            </div>
+
+
+            <button
+                class="main-button"
+                type="button"
+                onclick="showMenu()"
+            >
+
+                <span class="main-button-icon">
+                    🍺
+                </span>
+
+                <span class="main-button-copy">
+
+                    <small>
+                        DESCUBRE
+                    </small>
+
+                    <strong>
+                        VER NUESTRO MENÚ
+                    </strong>
+
+                </span>
+
+                <span class="main-button-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <div class="scroll-hint">
+
+                <span></span>
+
+                EXPLORA BANANOS
+
+                <b>↓</b>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MINI ACCESOS -->
+
+        <section class="quick-section">
+
+            <div class="section-label">
+                BANANOS BAR
+            </div>
+
+            <h2>
+                Elige tu favorito
+            </h2>
+
+
+            <div class="quick-grid">
+
+
+                <button
+                    class="quick-card"
+                    onclick="openCategory('cerveza')"
+                >
+
+                    <span>🍺</span>
+
+                    <strong>
+                        Cerveza
+                    </strong>
+
+                    <small>
+                        Fría y preparada
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="quick-card"
+                    onclick="openCategory('ron')"
+                >
+
+                    <span>🍹</span>
+
+                    <strong>
+                        Coctelería
+                    </strong>
+
+                    <small>
+                        Preparada al momento
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="quick-card promo-card"
+                    onclick="showPage('offersScreen')"
+                >
+
+                    <span>🔥</span>
+
+                    <strong>
+                        Promociones
+                    </strong>
+
+                    <small>
+                        Descubre las ofertas
+                    </small>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="home-promo">
+
+            <div>
+
+                <small>
+                    🔥 BANANOS BAR
+                </small>
+
+                <h2>
+                    Siempre hay algo
+                    <span>
+                        bueno esperándote.
+                    </span>
+                </h2>
+
+                <button
+                    onclick="showPage('offersScreen')"
+                >
+                    VER OFERTAS →
+                </button>
+
+            </div>
+
+            <div class="home-promo-beer">
+                🍻
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <span>
+                🍸
+            </span>
+
+            <strong>
+                BANANOS BAR
+            </strong>
+
+            <small>
+                DISFRUTA • COMPARTE • REGRESA
+            </small>
+
+        </footer>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MENÚ PRINCIPAL
+    ====================================================== -->
+
+    <section
+        id="menuScreen"
+        class="screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showHome()"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <small>
+                    BANANOS
+                </small>
+
+                <strong>
+                    MENÚ
+                </strong>
+
+            </div>
+
+            <span class="online">
+                <i></i>
+                OPEN
+            </span>
+
+        </div>
+
+
+        <div class="menu-title">
+
+            <small>
+                ✦ NUESTRA SELECCIÓN ✦
+            </small>
+
+            <h2>
+                ¿QUÉ SE TE
+                <span>ANTOJA?</span>
+            </h2>
+
+            <p>
+                Elige una categoría
+            </p>
+
+        </div>
+
+
+
+        <div class="categories">
+
+
+            <!-- CERVEZA -->
+
+            <button
+                class="category-card"
+                onclick="openCategory('cerveza')"
+            >
+
+                <span class="category-number">
+                    01
+                </span>
+
+                <span class="category-emoji">
+                    🍺
+                </span>
+
+                <div>
+
+                    <small>
+                        FRÍA • PREPARADA • SOLA
+                    </small>
+
+                    <h3>
+                        CERVEZA
+                    </h3>
+
+                    <p>
+                        Micheladas, cheladas y cerveza fría.
+                    </p>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <!-- WHISKY -->
+
+            <button
+                class="category-card"
+                onclick="openCategory('whisky')"
+            >
+
+                <span class="category-number">
+                    02
+                </span>
+
+                <span class="category-emoji">
+                    🥃
+                </span>
+
+                <div>
+
+                    <small>
+                        HIELO • REFRESCO • WHISKY
+                    </small>
+
+                    <h3>
+                        WHISKY
+                    </h3>
+
+                    <p>
+                        Clásicos preparados al momento.
+                    </p>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <!-- RON -->
+
+            <button
+                class="category-card"
+                onclick="openCategory('ron')"
+            >
+
+                <span class="category-number">
+                    03
+                </span>
+
+                <span class="category-emoji">
+                    🍹
+                </span>
+
+                <div>
+
+                    <small>
+                        TROPICAL • DULCE • FRESCO
+                    </small>
+
+                    <h3>
+                        RON
+                    </h3>
+
+                    <p>
+                        Piña colada, mojitos y más.
+                    </p>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <!-- TEQUILA -->
+
+            <button
+                class="category-card"
+                onclick="openCategory('tequila')"
+            >
+
+                <span class="category-number">
+                    04
+                </span>
+
+                <span class="category-emoji">
+                    🌵
+                </span>
+
+                <div>
+
+                    <small>
+                        MÉXICO • FRESCO • CLÁSICO
+                    </small>
+
+                    <h3>
+                        TEQUILA
+                    </h3>
+
+                    <p>
+                        Sonrisa, paloma y vampiro.
+                    </p>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <!-- SIN ALCOHOL -->
+
+            <button
+                class="category-card"
+                onclick="openCategory('sin-alcohol')"
+            >
+
+                <span class="category-number">
+                    05
+                </span>
+
+                <span class="category-emoji">
+                    🧊
+                </span>
+
+                <div>
+
+                    <small>
+                        REFRESCANTE • LIGERO
+                    </small>
+
+                    <h3>
+                        SIN ALCOHOL
+                    </h3>
+
+                    <p>
+                        Opciones frescas para todos.
+                    </p>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+                        <!-- SNACKS -->
+
+            <button
+                class="category-card"
+                onclick="openCategory('snacks')"
+            >
+
+                <span class="category-number">
+                    06
+                </span>
+
+                <span class="category-emoji">
+                    🍿
+                </span>
+
+                <div>
+
+                    <small>
+                        BOTANAS • PREPARADOS
+                    </small>
+
+                    <h3>
+                        SNACKS
+                    </h3>
+
+                    <p>
+                        Maruchan preparada, palomitas y más.
+                    </p>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CERVEZA
+    ====================================================== -->
+
+    <section
+        id="beerScreen"
+        class="screen category-screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showMenu()"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <small>
+                    MENÚ
+                </small>
+
+                <strong>
+                    CERVEZA
+                </strong>
+
+            </div>
+
+            <span class="header-drink">
+                🍺
+            </span>
+
+        </div>
+
+
+        <div class="category-hero">
+
+            <span>🍺</span>
+
+            <small>
+                BANANOS SELECTION
+            </small>
+
+            <h2>
+                CERVEZA
+            </h2>
+
+            <p>
+                Preparadas o solas. Tú eliges.
+            </p>
+
+        </div>
+
+
+        <div class="section-title">
+
+            <small>
+                01
+            </small>
+
+            <div>
+                <span>PREPARADOS</span>
+                <h3>Especialidades</h3>
+            </div>
+
+        </div>
+
+
+
+        <!-- MICHELADA -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/cerveza/michelada.jpg"
+                    alt="Michelada"
+                    onerror="imageFallback(this,'🍺')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>
+                    PREPARADA
+                </small>
+
+                <h3>
+                    MICHELADA
+                </h3>
+
+                <p>
+                    Mezcla de 4 salsas, jugo de limón,
+                    Clamato y cerveza de su preferencia.
+                </p>
+
+                <div class="sizes">
+                    <span>1/2 L</span>
+                    <span>1 L</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- CHELADA -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/cerveza/chelada.jpg"
+                    alt="Chelada"
+                    onerror="imageFallback(this,'🍺')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>
+                    PREPARADA
+                </small>
+
+                <h3>
+                    CHELADA
+                </h3>
+
+                <p>
+                    Jugo de limón con sal y cerveza
+                    de su preferencia.
+                </p>
+
+                <div class="sizes">
+                    <span>1/2 L</span>
+                    <span>1 L</span>
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <div class="section-title">
+
+            <small>
+                02
+            </small>
+
+            <div>
+                <span>CERVEZAS</span>
+                <h3>Solas</h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="beer-list">
+
+
+            <article class="beer-item">
+
+                <div class="beer-image">
+
+                    <img
+                        src="assets/img/menu/cerveza/corona.jpg"
+                        onerror="imageFallback(this,'🍺')"
+                    >
+
+                </div>
+
+                <div>
+                    <h4>Corona</h4>
+                    <p>Familiar • 1/2</p>
+                </div>
+
+            </article>
+
+
+            <article class="beer-item">
+
+                <div class="beer-image">
+
+                    <img
+                        src="assets/img/menu/cerveza/modelo-especial.jpg"
+                        onerror="imageFallback(this,'🍺')"
+                    >
+
+                </div>
+
+                <div>
+                    <h4>Modelo Especial</h4>
+                    <p>1 litro • 1/2</p>
+                </div>
+
+            </article>
+
+
+            <article class="beer-item">
+
+                <div class="beer-image">
+
+                    <img
+                        src="assets/img/menu/cerveza/negra-modelo.jpg"
+                        onerror="imageFallback(this,'🍺')"
+                    >
+
+                </div>
+
+                <div>
+                    <h4>Negra Modelo</h4>
+                    <p>1 litro • 1/2</p>
+                </div>
+
+            </article>
+
+
+            <article class="beer-item">
+
+                <div class="beer-image">
+
+                    <img
+                        src="assets/img/menu/cerveza/ultra.jpg"
+                        onerror="imageFallback(this,'🍺')"
+                    >
+
+                </div>
+
+                <div>
+                    <h4>Ultra</h4>
+                    <p>1/2 • 1 litro</p>
+                </div>
+
+            </article>
+
+
+            <article class="beer-item">
+
+                <div class="beer-image">
+
+                    <img
+                        src="assets/img/menu/cerveza/leon.jpg"
+                        onerror="imageFallback(this,'🍺')"
+                    >
+
+                </div>
+
+                <div>
+                    <h4>León</h4>
+                    <p>Mega</p>
+                </div>
+
+            </article>
+
+
+            <article class="beer-item">
+
+                <div class="beer-image">
+
+                    <img
+                        src="assets/img/menu/cerveza/pacifico.jpg"
+                        onerror="imageFallback(this,'🍺')"
+                    >
+
+                </div>
+
+                <div>
+                    <h4>Pacífico</h4>
+                    <p>1 litro • 1/2</p>
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <div class="rim-card">
+
+            <div class="rim-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <small>
+                    PERSONALIZA TU BEBIDA
+                </small>
+
+                <h3>
+                    Escarchados
+                </h3>
+
+                <div class="rim-options">
+
+                    <span>Sal y limón</span>
+                    <span>Ajonjolí</span>
+                    <span>Tajín</span>
+                    <span>Miguelito</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    <!-- =====================================================
+     VENENOSA
+====================================================== -->
+
+<article class="drink-card">
+
+    <div class="drink-photo">
+        <img
+            src="assets/img/menu/cerveza/venenosa.jpg"
+            alt="Venenosa"
+            onerror="imageFallback(this,'🍺')"
+        >
+    </div>
+
+    <div class="drink-info">
+
+        <small>
+            PREPARADA
+        </small>
+
+        <h3>
+            VENENOSA
+        </h3>
+
+        <p>
+            Mezcla de 4 salsas, jugo de limón,
+            Clamato y cerveza de su preferencia.
+            Directa del envase.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     CERILLITO
+====================================================== -->
+
+<article class="drink-card">
+
+    <div class="drink-photo">
+        <img
+            src="assets/img/menu/cerveza/cerillito1.jpg"
+            alt="Cerillito"
+            onerror="imageFallback(this,'🍺')"
+        >
+    </div>
+
+    <div class="drink-info">
+
+        <small>
+            PREPARADA
+        </small>
+
+        <h3>
+            CERILLITO
+        </h3>
+
+        <p>
+            Lata de tu preferencia escarchada.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     VICKYS SABORES
+====================================================== -->
+
+<article class="drink-card">
+
+    <div class="drink-photo">
+        <img
+            src="assets/img/menu/cerveza/vickys-sabores.jpg"
+            alt="Vickys Sabores"
+            onerror="imageFallback(this,'🍺')"
+        >
+    </div>
+
+    <div class="drink-info">
+
+        <small>
+            473 ML
+        </small>
+
+        <h3>
+            VICKYS SABORES
+        </h3>
+
+        <p>
+            Lata de Vicky de 473 ml.
+        </p>
+
+        <div class="sizes">
+            <span>MANGO</span>
+            <span>CHAMOY</span>
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     VICKY LATA
+====================================================== -->
+
+<article class="drink-card">
+
+    <div class="drink-photo">
+        <img
+            src="assets/img/menu/cerveza/vicky-lata.jpg"
+            alt="Vicky Lata"
+            onerror="imageFallback(this,'🍺')"
+        >
+    </div>
+
+    <div class="drink-info">
+
+        <small>
+            473 ML
+        </small>
+
+        <h3>
+            VICKY LATA
+        </h3>
+
+        <p>
+            Lata de Vicky de 473 ml.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     MODELO LATA
+====================================================== -->
+
+<article class="drink-card">
+
+    <div class="drink-photo">
+        <img
+            src="assets/img/menu/cerveza/modelo-lata.jpg"
+            alt="Modelo Lata"
+            onerror="imageFallback(this,'🍺')"
+        >
+    </div>
+
+    <div class="drink-info">
+
+        <small>
+            473 ML
+        </small>
+
+        <h3>
+            MODELO LATA
+        </h3>
+
+        <p>
+            Lata de Modelo de 473 ml.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- =====================================================
+     VICTORIA
+====================================================== -->
+
+<article class="drink-card">
+
+    <div class="drink-photo">
+        <img
+            src="assets/img/menu/cerveza/victoria.jpg"
+            alt="Victoria"
+            onerror="imageFallback(this,'🍺')"
+        >
+    </div>
+
+    <div class="drink-info">
+
+        <small>
+            MEDIA • 1 LITRO
+        </small>
+
+        <h3>
+            VICTORIA
+        </h3>
+
+        <p>
+            Cerveza Victoria disponible en presentación media y litro.
+        </p>
+
+    </div>
+
+</article>
+
+
+
+    </section>
+
+
+    <!-- =====================================================
+         WHISKY
+    ====================================================== -->
+
+    <section
+        id="whiskyScreen"
+        class="screen category-screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showMenu()"
+            >
+                ←
+            </button>
+
+            <div>
+                <small>MENÚ</small>
+                <strong>WHISKY</strong>
+            </div>
+
+            <span class="header-drink">
+                🥃
+            </span>
+
+        </div>
+
+
+        <div class="category-hero">
+
+            <span>🥃</span>
+
+            <small>
+                BANANOS SELECTION
+            </small>
+
+            <h2>
+                WHISKY
+            </h2>
+
+            <p>
+                Clásicos preparados al momento.
+            </p>
+
+        </div>
+
+
+        <article class="drink-card large-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/whisky/cuba.jpg"
+                    alt="Cuba"
+                    onerror="imageFallback(this,'🥃')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>
+                    PREPARADO
+                </small>
+
+                <h3>
+                    CUBA
+                </h3>
+
+                <p>
+                    Agua mineral, hielo, refresco
+                    a elegir y whisky.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <div class="soft-drinks">
+
+            <small>
+                REFRESCOS
+            </small>
+
+            <h3>
+                Elige tu favorito
+            </h3>
+
+
+            <div class="soft-grid">
+
+                <div>
+                    <span>🥤</span>
+                    <strong>Sprite</strong>
+                </div>
+
+                <div>
+                    <span>🥤</span>
+                    <strong>Sidral Mundet</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RON
+    ====================================================== -->
+
+    <section
+        id="ronScreen"
+        class="screen category-screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showMenu()"
+            >
+                ←
+            </button>
+
+            <div>
+                <small>MENÚ</small>
+                <strong>RON</strong>
+            </div>
+
+            <span class="header-drink">
+                🍹
+            </span>
+
+        </div>
+
+
+        <div class="category-hero">
+
+            <span>🍹</span>
+
+            <small>
+                TROPICAL SELECTION
+            </small>
+
+            <h2>
+                RON
+            </h2>
+
+            <p>
+                Tropical, fresco y preparado.
+            </p>
+
+        </div>
+
+
+        <div class="drink-stack">
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/ron/pina-colada.jpg"
+                        onerror="imageFallback(this,'🍹')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>TROPICAL</small>
+
+                    <h3>
+                        PIÑA COLADA
+                    </h3>
+
+                    <p>
+                        Ron, crema de coco, Carnation,
+                        jugo de piña y canela en polvo
+                        opcional.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/ron/quemadita.jpg"
+                        onerror="imageFallback(this,'🥃')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>CLÁSICO</small>
+
+                    <h3>
+                        QUEMADITA
+                    </h3>
+
+                    <p>
+                        Ron preparado al estilo Bananos.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/ron/mojito.jpg"
+                        onerror="imageFallback(this,'🍃')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>FRESCO</small>
+
+                    <h3>
+                        MOJITO
+                    </h3>
+
+                    <p>
+                        Ron, limón, hierbabuena
+                        y mezcla refrescante.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/ron/mojito-fresa.jpg"
+                        onerror="imageFallback(this,'🍓')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>FRUTAL</small>
+
+                    <h3>
+                        MOJITO FRESA
+                    </h3>
+
+                    <p>
+                        Mojito preparado con
+                        un toque de fresa.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TEQUILA
+    ====================================================== -->
+
+    <section
+        id="tequilaScreen"
+        class="screen category-screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showMenu()"
+            >
+                ←
+            </button>
+
+            <div>
+                <small>MENÚ</small>
+                <strong>TEQUILA</strong>
+            </div>
+
+            <span class="header-drink">
+                🌵
+            </span>
+
+        </div>
+
+
+        <div class="category-hero">
+
+            <span>🌵</span>
+
+            <small>
+                MEXICAN SELECTION
+            </small>
+
+            <h2>
+                TEQUILA
+            </h2>
+
+            <p>
+                Clásicos preparados con tequila.
+            </p>
+
+        </div>
+
+
+        <div class="drink-stack">
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/tequila/sonrisa.jpg"
+                        onerror="imageFallback(this,'🍊')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>
+                        DULCE • CÍTRICO
+                    </small>
+
+                    <h3>
+                        SUNRISE
+                    </h3>
+
+                    <p>
+                        Jugo de naranja,
+                        tequila y granadina.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/tequila/paloma.jpg"
+                        onerror="imageFallback(this,'🍹')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>
+                        CLÁSICA
+                    </small>
+
+                    <h3>
+                        PALOMA
+                    </h3>
+
+                    <p>
+                        Jugo de limón, sal,
+                        tequila y Squirt.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="drink-card">
+
+                <div class="drink-photo">
+
+                    <img
+                        src="assets/img/menu/tequila/vampiro.jpg"
+                        onerror="imageFallback(this,'🩸')"
+                    >
+
+                </div>
+
+                <div class="drink-info">
+
+                    <small>
+                        BANANOS STYLE
+                    </small>
+
+                    <h3>
+                        VAMPIRO
+                    </h3>
+
+                    <p>
+                        Tequila, Sangrita
+                        y Squirt.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SIN ALCOHOL
+    ====================================================== -->
+
+    <section
+        id="zeroScreen"
+        class="screen category-screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showMenu()"
+            >
+                ←
+            </button>
+
+            <div>
+                <small>MENÚ</small>
+                <strong>SIN ALCOHOL</strong>
+            </div>
+
+            <span class="header-drink">🧊</span>
+
+        </div>
+
+
+        <div class="category-hero">
+
+            <span>🧊</span>
+
+            <small>ZERO ALCOHOL</small>
+
+            <h2>SIN ALCOHOL</h2>
+
+            <p>
+                Refrescante también se disfruta.
+            </p>
+
+        </div>
+
+
+        <!-- CLAMATO -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/sin-alcohol/clamato.jpg"
+                    alt="Clamato preparado"
+                    onerror="imageFallback(this,'🍅')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>PREPARADO</small>
+
+                <h3>CLAMATO PREPARADO</h3>
+
+                <p>
+                    Clamato preparado al estilo Bananos.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- CORONA CERO -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/sin-alcohol/corona-cero.jpg"
+                    alt="Corona Cero"
+                    onerror="imageFallback(this,'🍺')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>SIN ALCOHOL</small>
+
+                <h3>CORONA CERO</h3>
+
+                <p>
+                    El sabor de Corona en su versión sin alcohol.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- MINERAL -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/sin-alcohol/mineral.jpg"
+                    alt="Mineral preparado"
+                    onerror="imageFallback(this,'🧊')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>REFRESCANTE</small>
+
+                <h3>MINERAL PREPARADO</h3>
+
+                <p>
+                    Agua mineral preparada al estilo Bananos.
+                </p>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         SNACKS
+    ====================================================== -->
+
+    <section
+        id="snacksScreen"
+        class="screen category-screen"
+    >
+
+        <div class="page-header">
+
+            <button
+                class="back-btn"
+                onclick="showMenu()"
+            >
+                ←
+            </button>
+
+            <div>
+                <small>MENÚ</small>
+                <strong>SNACKS</strong>
+            </div>
+
+            <span class="header-drink">🍿</span>
+
+        </div>
+
+
+        <div class="category-hero">
+
+            <span>🍿</span>
+
+            <small>BANANOS SNACKS</small>
+
+            <h2>SNACKS</h2>
+
+            <p>
+                Algo rico para acompañar tu bebida.
+            </p>
+
+        </div>
+
+
+        <!-- MARUCHAN -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/snacks/maruchan.jpg"
+                    alt="Maruchan preparada"
+                    onerror="imageFallback(this,'🍜')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>PREPARADA</small>
+
+                <h3>MARUCHAN</h3>
+
+                <p>
+                    Maruchan preparada al estilo Bananos.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PALOMITAS -->
+
+        <article class="drink-card">
+
+            <div class="drink-photo">
+
+                <img
+                    src="assets/img/menu/snacks/palomitas.jpg"
+                    alt="Palomitas"
+                    onerror="imageFallback(this,'🍿')"
+                >
+
+            </div>
+
+            <div class="drink-info">
+
+                <small>BOTANA</small>
+
+                <h3>PALOMITAS</h3>
+
+                <p>
+                    Palomitas para acompañar tus bebidas.
+                </p>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+     OFERTAS
+====================================================== -->
+<!-- =====================================================
+     OFERTAS / PROMOCIONES
+====================================================== -->
+
+<section
+    id="offersScreen"
+    class="screen offers-screen"
+>
+
+    <!-- HEADER -->
+
+    <div class="page-header">
+
+        <button
+            class="back-btn"
+            onclick="showHome()"
+            aria-label="Regresar"
+        >
+            ←
+        </button>
+
+        <div>
+            <small>BANANOS BAR</small>
+            <strong>PROMOCIONES</strong>
+        </div>
+
+        <span class="header-drink">
+            🔥
+        </span>
+
+    </div>
+
+
+    <!-- HERO -->
+
+    <section class="promo-hero">
+
+        <div class="promo-hero-glow"></div>
+
+        <div class="promo-fire">
+            🔥
+        </div>
+
+        <span class="promo-eyebrow">
+            BANANOS BAR
+        </span>
+
+        <h1>
+            PROMO<span>CIONES</span>
+        </h1>
+
+        <p>
+            Lo bueno se disfruta más en Bananos.
+        </p>
+
+        <div class="promo-dots">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CONTENEDOR DINÁMICO
+
+         NO PONGAS PROMOCIONES AQUÍ.
+
+         APP.JS LAS GENERARÁ AUTOMÁTICAMENTE.
+    ================================================== -->
+
+    <section
+        id="promotionsContainer"
+        class="promotions-container"
+    >
+
+        <div class="promotions-loading">
+
+            <div class="loading-beer">
+                🍻
+            </div>
+
+            <small>
+                BANANOS BAR
+            </small>
+
+            <strong>
+                CARGANDO PROMOCIONES
+            </strong>
+
+            <div class="loading-line">
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="promo-footer-message">
+
+        <span>✦</span>
+
+        <small>
+            BANANOS BAR
+        </small>
+
+        <h3>
+            DISFRUTA EL
+            <b>MOMENTO</b>
+        </h3>
+
+        <p>
+            Consulta nuestras promociones disponibles.
+        </p>
+
+    </section>
+
+</section>
+
+
+    <!-- =====================================================
+         PAGOS
+    ====================================================== -->
+
+    <!-- =====================================================
+         PAGOS PREMIUM
+    ====================================================== -->
+
+    <section
+        id="paymentsScreen"
+        class="screen simple-screen payments-premium-screen"
+    >
+
+        <div class="simple-title payment-heading">
+
+            <small>BANANOS BAR</small>
+
+            <h2>
+                MÉTODOS DE <span>PAGO</span>
+            </h2>
+
+            <p>Elige la forma que prefieras.</p>
+
+        </div>
+
+
+        <div
+            id="transferPayment"
+            class="payment-premium-card"
+        >
+
+            <div class="payment-card-top">
+
+                <div class="payment-bank-icon">
+                    💳
+                </div>
+
+                <div class="payment-bank-name">
+                    <small>TRANSFERENCIA</small>
+                    <strong id="paymentBank">BBVA</strong>
+                </div>
+
+            </div>
+
+
+            <div class="payment-card-body">
+
+                <small class="payment-label">
+                    TARJETA DE DÉBITO
+                </small>
+
+                <div class="payment-number-row">
+
+                    <strong
+                        id="paymentCardMasked"
+                        class="payment-number"
+                    >
+                        CARGANDO...
+                    </strong>
+
+                    <button
+                        id="copyPaymentButton"
+                        class="copy-payment-button"
+                        type="button"
+                    >
+                        COPIAR
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="paymentHolderBox"
+                    class="payment-holder-box"
+                    hidden
+                >
+                    <small>TITULAR</small>
+                    <strong id="paymentHolder"></strong>
+                </div>
+
+            </div>
+
+
+            <div class="payment-security">
+                <span>●</span>
+                Datos para transferencia
+            </div>
+
+        </div>
+
+
+        <div
+            id="cashPayment"
+            class="cash-premium-card"
+        >
+
+            <div class="cash-icon">
+                💵
+            </div>
+
+            <div>
+                <small>PAGO DIRECTO</small>
+                <strong>EFECTIVO</strong>
+                <p>Disponible directamente en Bananos Bar.</p>
+            </div>
+
+        </div>
+
+
+        <div
+            id="paymentMessage"
+            class="payment-copy-message"
+        >
+            ✓ Número copiado
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
+
+    <section
+        id="contactScreen"
+        class="screen simple-screen"
+    >
+
+        <div class="simple-title">
+
+            <small>
+                BANANOS BAR
+            </small>
+
+            <h2>
+                CONTACTO
+            </h2>
+
+            <p>
+                Síguenos y ponte en contacto.
+            </p>
+
+        </div>
+
+
+        <a
+            class="contact-card contact-card-link"
+            href="https://wa.me/0000000000"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <span>💬</span>
+
+            <div>
+                <small>WHATSAPP</small>
+                <strong>773 128 3353</strong>
+            </div>
+        </a>
+
+
+        <div class="contact-card">
+            <span>◎</span>
+            <div>
+                <small>INSTAGRAM</small>
+                <strong>Próximamente</strong>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BANANOS MUSIC
+    ====================================================== -->
+
+    <section
+        id="musicScreen"
+        class="screen simple-screen music-screen"
+    >
+
+        <div class="simple-title music-heading">
+
+            <small>BANANOS BAR</small>
+
+            <h2>
+                PIDE TU <span>CANCIÓN</span>
+            </h2>
+
+            <p>
+                ¿Qué quieres escuchar esta noche?
+            </p>
+
+        </div>
+
+
+        <div class="music-request-card">
+
+            <div class="music-big-icon">
+                ♫
+            </div>
+
+
+            <div class="music-form">
+
+                <label>
+                    CANCIÓN
+
+                    <input
+                        id="musicSong"
+                        type="text"
+                        maxlength="100"
+                        autocomplete="off"
+                        placeholder="Ej. La Chona"
+                    >
+                </label>
+
+
+                <label>
+                    ARTISTA
+
+                    <input
+                        id="musicArtist"
+                        type="text"
+                        maxlength="100"
+                        autocomplete="off"
+                        placeholder="Ej. Los Tucanes de Tijuana"
+                    >
+                </label>
+
+
+                <button
+                    id="musicSendButton"
+                    class="music-send-button"
+                    type="button"
+                    onclick="sendMusicRequest()"
+                >
+                    PEDIR CANCIÓN
+                </button>
+
+
+                <div
+                    id="musicMessage"
+                    class="music-message"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="music-note">
+
+            <span>●</span>
+
+            Tu petición llegará directamente
+            al DJ de Bananos.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NAVEGACIÓN INFERIOR
+    ====================================================== -->
+
+    <nav class="bottom-nav">
+
+
+        <button
+            class="nav-item active"
+            data-target="homeScreen"
+            onclick="showHome()"
+        >
+
+            <span>⌂</span>
+            <small>Inicio</small>
+
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-target="menuScreen"
+            onclick="showMenu()"
+        >
+
+            <span>☰</span>
+            <small>Menú</small>
+
+        </button>
+
+
+        <button
+            class="nav-item nav-fire"
+            data-target="offersScreen"
+            onclick="showPage('offersScreen')"
+        >
+
+            <span>🔥</span>
+            <small>Ofertas</small>
+
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-target="paymentsScreen"
+            onclick="showPage('paymentsScreen')"
+        >
+
+            <span>▣</span>
+            <small>Pagos</small>
+
+        </button>
+
+
+        <button
+            class="nav-item"
+            data-target="musicScreen"
+            onclick="showPage('musicScreen')"
+        >
+
+            <span>♫</span>
+            <small>Música</small>
+
+        </button>
+
+
+
+        <button
+            class="nav-item"
+            data-target="contactScreen"
+            onclick="showPage('contactScreen')"
+        >
+
+            <span>●</span>
+            <small>Contacto</small>
+
+        </button>
+
+
+    </nav>
+
+
+</main>
+
+
+
+<script src="app.js?v=0000000000"></script>
+
+<script src="promotions-clean.js?v=99999999"></script>
+
+
+
+
+<script src="music.js?v=0000000000"></script>
+
+
+<script src="menu-live.js?v=1"></script>
+
+</body>
+</html>

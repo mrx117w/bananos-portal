@@ -1,0 +1,52 @@
+services:
+
+  bananos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: bananos-app
+
+    restart: unless-stopped
+
+    expose:
+      - "8080"
+
+    volumes:
+      # Base de datos JSON
+      - ./data/data:/app/data/data
+
+      # Imágenes agregadas desde promociones
+      - ./data/assets/img/promos:/app/data/assets/img/promos
+
+      # Imágenes agregadas desde administrador de productos
+      - ./data/assets/img/menu/uploads:/app/data/assets/img/menu/uploads
+
+    networks:
+      - bananos-network
+
+
+  nginx:
+    image: nginx:alpine
+
+    container_name: bananos-nginx
+
+    restart: unless-stopped
+
+    depends_on:
+      - bananos
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+    networks:
+      - bananos-network
+
+
+networks:
+
+  bananos-network:
+    driver: bridge

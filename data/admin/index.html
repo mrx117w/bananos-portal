@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#050805"
+    >
+
+    <title>
+        Bananos Bar | Administrador
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/admin/admin.css?v=4"
+    >
+</head>
+
+
+<body>
+
+<div class="admin-bg">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+</div>
+
+
+<header class="admin-header">
+
+    <div class="brand">
+
+        <span class="status-dot"></span>
+
+        <div>
+            <strong>
+                BANANOS BAR
+            </strong>
+
+            <small>
+                ADMIN SYSTEM
+            </small>
+        </div>
+
+    </div>
+
+
+    <div class="admin-badge">
+        ADMIN
+    </div>
+
+</header>
+
+
+
+<main class="admin-container">
+
+
+    <!-- ================================================
+         CABECERA
+    ================================================= -->
+
+    <section
+        class="hero-admin"
+        id="adminHero"
+    >
+
+        <span class="eyebrow">
+            ● PORTAL DE CONTROL
+        </span>
+
+        <h1>
+            Panel<br>
+            <span>Administrador</span>
+        </h1>
+
+        <p>
+            Centro de administración de
+            Bananos Bar.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================================================
+         ESTADO
+    ================================================= -->
+
+    <section
+        class="status-panel"
+        id="adminStatus"
+    >
+
+        <div class="status-item">
+
+            <span>
+                SISTEMA
+            </span>
+
+            <strong class="online">
+                ● ONLINE
+            </strong>
+
+        </div>
+
+
+        <div class="status-item">
+
+            <span>
+                PROMOCIONES
+            </span>
+
+            <strong>
+                <span id="promoCounter">0</span>/3
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================
+         DASHBOARD
+    ================================================= -->
+
+    <section
+        class="admin-dashboard"
+        id="adminDashboard"
+    >
+
+        <div class="dashboard-heading">
+
+            <span class="eyebrow">
+                CENTRO DE CONTROL
+            </span>
+
+            <h2>
+                ¿Qué quieres administrar?
+            </h2>
+
+            <p>
+                Selecciona una sección.
+            </p>
+
+        </div>
+
+
+        <div class="dashboard-grid">
+
+
+            <button
+                type="button"
+                class="dashboard-card"
+                data-module="products"
+            >
+
+                <div class="dashboard-icon">
+                    🍹
+                </div>
+
+                <div>
+
+                    <small>
+                        MENÚ DIGITAL
+                    </small>
+
+                    <strong>
+                        PRODUCTOS
+                    </strong>
+
+                    <span>
+                        Agregar, editar,
+                        ocultar y eliminar
+                        productos.
+                    </span>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="dashboard-card"
+                data-module="promotions"
+            >
+
+                <div class="dashboard-icon">
+                    🔥
+                </div>
+
+                <div>
+
+                    <small>
+                        OFERTAS
+                    </small>
+
+                    <strong>
+                        PROMOCIONES
+                    </strong>
+
+                    <span>
+                        Publicar y administrar
+                        promociones del bar.
+                    </span>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+
+
+            <button
+                type="button"
+                class="dashboard-card"
+                data-module="music"
+            >
+
+                <div class="dashboard-icon">
+                    ♫
+                </div>
+
+                <div>
+
+                    <small>
+                        BANANOS MUSIC
+                    </small>
+
+                    <strong>
+                        CANCIONES
+                    </strong>
+
+                    <span>
+                        Ver y atender las
+                        canciones pedidas.
+                    </span>
+
+                </div>
+
+                <b>→</b>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================
+         PRODUCTOS
+    ================================================= -->
+
+    <div
+        class="admin-module-view"
+        id="adminProductsView"
+    >
+
+        <button
+            type="button"
+            class="admin-back-button"
+            data-back
+        >
+            ← VOLVER AL PANEL
+        </button>
+
+
+        <section
+            class="menu-admin-section"
+            id="menuEditor"
+        >
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        🍹 MENÚ DIGITAL
+                    </span>
+
+                    <h2>
+                        Administrar productos
+                    </h2>
+
+                </div>
+
+
+                <span class="limit">
+
+                    <span id="menuProductCount">
+                        0
+                    </span>
+
+                    PRODUCTOS
+
+                </span>
+
+            </div>
+
+
+
+            <div class="menu-admin-intro">
+
+                <div>
+
+                    <strong>
+                        CONTROL DEL MENÚ
+                    </strong>
+
+                    <p>
+                        Agrega, modifica,
+                        oculta o elimina
+                        productos.
+                    </p>
+
+                </div>
+
+                <span>
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+
+            <div class="menu-editor-grid">
+
+
+                <div class="menu-field">
+
+                    <label>
+                        CATEGORÍA
+                    </label>
+
+                    <select id="menuCategory">
+
+                        <option value="">
+                            Selecciona categoría
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="menu-field">
+
+                    <label>
+                        NOMBRE
+                    </label>
+
+                    <input
+                        id="menuName"
+                        type="text"
+                        maxlength="80"
+                        placeholder="Ej. Azulito"
+                    >
+
+                </div>
+
+
+
+                <div class="menu-field">
+
+                    <label>
+                        ETIQUETA
+                    </label>
+
+                    <input
+                        id="menuTag"
+                        type="text"
+                        maxlength="50"
+                        placeholder="Ej. ESPECIAL"
+                    >
+
+                </div>
+
+
+
+                <div class="menu-field">
+
+                    <label>
+                        PRECIO
+                    </label>
+
+                    <input
+                        id="menuPrice"
+                        type="text"
+                        maxlength="30"
+                        placeholder="Ej. $80"
+                    >
+
+                </div>
+
+
+
+                <div
+                    class="
+                        menu-field
+                        menu-field-full
+                    "
+                >
+
+                    <label>
+                        DESCRIPCIÓN
+                    </label>
+
+                    <textarea
+                        id="menuDescription"
+                        maxlength="250"
+                        placeholder="Describe el producto..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <div
+                    class="
+                        menu-field
+                        menu-field-full
+                    "
+                >
+
+                    <label>
+                        FOTO
+                    </label>
+
+                    <input
+                        id="menuImage"
+                        type="file"
+                        accept="
+                            image/jpeg,
+                            image/png,
+                            image/webp
+                        "
+                    >
+
+                    <small>
+                        JPG, PNG o WEBP · máximo 2 MB
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="menu-editor-actions">
+
+                <button
+                    type="button"
+                    id="menuSave"
+                    class="save-button"
+                >
+                    ＋ AGREGAR PRODUCTO
+                </button>
+
+
+                <button
+                    type="button"
+                    id="menuCancel"
+                    class="menu-cancel-button"
+                    hidden
+                >
+                    CANCELAR EDICIÓN
+                </button>
+
+            </div>
+
+
+
+            <div
+                class="
+                    section-title
+                    menu-products-title
+                "
+            >
+
+                <div>
+
+                    <span class="eyebrow">
+                        INVENTARIO
+                    </span>
+
+                    <h2>
+                        Productos actuales
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="menuProductList"
+                class="menu-admin-products"
+            >
+
+                <div class="menu-admin-empty">
+
+                    <div>🍹</div>
+
+                    <strong>
+                        Cargando menú...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- ================================================
+         PROMOCIONES
+    ================================================= -->
+
+    <div
+        class="admin-module-view"
+        id="adminPromotionsView"
+    >
+
+        <button
+            type="button"
+            class="admin-back-button"
+            data-back
+        >
+            ← VOLVER AL PANEL
+        </button>
+
+
+        <section class="section-title">
+
+            <div>
+
+                <span class="eyebrow">
+                    PROMOCIONES
+                </span>
+
+                <h2>
+                    Administrar ofertas
+                </h2>
+
+            </div>
+
+
+            <span class="limit">
+                MÁXIMO 3
+            </span>
+
+        </section>
+
+
+
+        <section class="promo-editor">
+
+            <div class="upload-zone">
+
+                <input
+                    type="file"
+                    id="promoImage"
+                    accept="
+                        image/jpeg,
+                        image/png,
+                        image/webp
+                    "
+                    hidden
+                >
+
+
+                <label
+                    for="promoImage"
+                    class="upload-box"
+                    id="uploadBox"
+                >
+
+                    <div
+                        class="image-preview"
+                        id="imagePreview"
+                    >
+
+                        <span class="camera">
+                            📷
+                        </span>
+
+                        <strong>
+                            SUBIR FOTO
+                        </strong>
+
+                        <small>
+                            Toca para seleccionar
+                        </small>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+
+
+            <div class="form-area">
+
+                <label>
+
+                    NOMBRE DE LA PROMOCIÓN
+
+                    <input
+                        type="text"
+                        id="promoTitle"
+                        maxlength="60"
+                        placeholder="Ej. Micheladas 2x1"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    DESCRIPCIÓN
+
+                    <textarea
+                        id="promoDescription"
+                        maxlength="180"
+                        placeholder="Describe la promoción..."
+                    ></textarea>
+
+                </label>
+
+
+                <button
+                    class="save-button"
+                    id="savePromotion"
+                    type="button"
+                >
+                    <span>＋</span>
+                    PUBLICAR PROMOCIÓN
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="current-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ACTIVAS
+                    </span>
+
+                    <h2>
+                        Promociones publicadas
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="promotions-list"
+                id="promotionsList"
+            >
+
+                <div class="empty-state">
+
+                    <div>🍹</div>
+
+                    <strong>
+                        Sin promociones
+                    </strong>
+
+                    <p>
+                        Agrega tu primera promoción.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- ================================================
+         MUSICA
+    ================================================= -->
+
+    <div
+        class="admin-module-view"
+        id="adminMusicView"
+    >
+
+        <button
+            type="button"
+            class="admin-back-button"
+            data-back
+        >
+            ← VOLVER AL PANEL
+        </button>
+
+
+        <section class="music-admin-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ♫ BANANOS MUSIC
+                    </span>
+
+                    <h2>
+                        Canciones pedidas
+                    </h2>
+
+                </div>
+
+
+                <span
+                    class="limit"
+                    id="musicPendingCounter"
+                >
+                    0 PENDIENTES
+                </span>
+
+            </div>
+
+
+
+            <div class="music-admin-info">
+
+                <span>
+                    ● EN VIVO
+                </span>
+
+                Las peticiones de los clientes
+                aparecerán aquí automáticamente.
+
+            </div>
+
+
+
+            <div
+                id="musicRequestsList"
+                class="music-requests-list"
+            >
+
+                <div class="music-admin-empty">
+
+                    <div>♫</div>
+
+                    <strong>
+                        Cargando peticiones...
+                    </strong>
+
+                    <p>
+                        BANANOS MUSIC
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+</main>
+
+
+
+<div
+    class="toast"
+    id="toast"
+>
+    Operación completada
+</div>
+
+
+
+<!-- ================================================
+     CRUD EXISTENTE
+================================================= -->
+
+<script src="/admin/admin.js?v=4"></script>
+<script src="/admin/music-admin.js?v=4"></script>
+<script src="/admin/menu-admin.js?v=4"></script>
+
+
+
+<!-- ================================================
+     NAVEGACION
+================================================= -->
+
+<script>
+
+(() => {
+
+    "use strict";
+
+
+    const dashboard =
+        document.getElementById(
+            "adminDashboard"
+        );
+
+    const hero =
+        document.getElementById(
+            "adminHero"
+        );
+
+    const status =
+        document.getElementById(
+            "adminStatus"
+        );
+
+
+    const views = {
+
+        products:
+            document.getElementById(
+                "adminProductsView"
+            ),
+
+        promotions:
+            document.getElementById(
+                "adminPromotionsView"
+            ),
+
+        music:
+            document.getElementById(
+                "adminMusicView"
+            )
+
+    };
+
+
+    function hideAllModules() {
+
+        Object.values(
+            views
+        ).forEach(view => {
+
+            if (view) {
+
+                view.classList.remove(
+                    "active"
+                );
+
+            }
+
+        });
+
+    }
+
+
+
+    function showDashboard() {
+
+        hideAllModules();
+
+
+        if (dashboard) {
+            dashboard.hidden = false;
+            dashboard.style.display = "";
+        }
+
+
+        if (hero) {
+            hero.hidden = false;
+        }
+
+
+        if (status) {
+            status.hidden = false;
+        }
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+
+    function openModule(name) {
+
+        const target =
+            views[name];
+
+
+        if (!target) {
+
+            console.error(
+                "[BANANOS] Módulo inexistente:",
+                name
+            );
+
+            return;
+        }
+
+
+        hideAllModules();
+
+
+        if (dashboard) {
+            dashboard.hidden = true;
+        }
+
+
+        if (hero) {
+            hero.hidden = true;
+        }
+
+
+        if (status) {
+            status.hidden = true;
+        }
+
+
+        target.classList.add(
+            "active"
+        );
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+
+    document
+        .querySelectorAll(
+            "[data-module]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    openModule(
+                        button.dataset.module
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    document
+        .querySelectorAll(
+            "[data-back]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                showDashboard
+            );
+
+        });
+
+
+
+    window.BANANOS_showDashboard =
+        showDashboard;
+
+    window.BANANOS_openAdminModule =
+        openModule;
+
+
+    showDashboard();
+
+
+    console.log(
+        "[BANANOS] Admin Navigation CLEAN OK"
+    );
+
+})();
+
+</script>
+
+
+</body>
+</html>
